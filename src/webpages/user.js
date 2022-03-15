@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import Form from './Form';
 
 const User = (props) => {
     const { userId } = useParams();
@@ -7,6 +8,8 @@ const User = (props) => {
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [user, setUser] = useState([]);
+
+    
 
     console.log(userId);
     console.log(`${userId}`);
@@ -51,7 +54,8 @@ const User = (props) => {
                     <p class="card-text">Tipologgia {user.userType}, <br /> Sottoscrizione il {user.startDate}</p>
                 </div>
 
-
+                {/* <Form  name={user.firstName} cognome={user.lastName} cf={user.codiceFiscale} 
+                eta={user.eta} data={user.startDate} userIdO={user.userId} role={user.userType}/> */}
             </div>
         );
     }
