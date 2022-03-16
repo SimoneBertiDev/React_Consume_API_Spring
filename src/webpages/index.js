@@ -5,6 +5,9 @@ import {
 import Home from './home';
 import User from './user';
 import DelUser from './DelUser'
+import AddUser from './AddUser'
+import EditUser from './EditUser';
+import Update from './Update';
 
 class web extends Component {
     render() {
@@ -15,6 +18,9 @@ class web extends Component {
                         <Route exact path='/' element={<Home/>}/>
                         <Route path = "/user/:userId" element={<User/>} />
                         <Route path = "/Delite/:userId" element={<DelUser/>} />
+                        <Route path = "/Add" element={<AddUser/>} />
+                        <Route path = "/Edit/:userId" element={<EditUser/>} />
+                        <Route path = "/Update" element={<Update/>} />
                     </Routes>
                 </Router>
             </div>

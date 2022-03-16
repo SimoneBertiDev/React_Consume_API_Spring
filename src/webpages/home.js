@@ -6,7 +6,7 @@ const Home = () => {
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [users, setUsers] = useState([]);
-
+    
     useEffect(() => {
         fetch("http://localhost:8080/user")
             .then(res => res.json())
@@ -47,11 +47,11 @@ const Home = () => {
                         <div class="row">
 
                             <div className='col-md-5 p-2'>
-                                <Link to={`user/${user.userId}`}><button className='btn btn-primary float-right'>EDIT</button></Link>
+                            <Link to={`Edit/${user.userId}`}> <button className='btn btn-primary float-right'>EDIT</button></Link>
                             </div>
 
                             <div className='col-md-5 p-2'>
-                                <button className='btn btn-success float-right'>INFO</button>
+                            <Link to={`user/${user.userId}`}><button className='btn btn-success float-right'>INFO</button></Link>
                             </div>
 
                             <div className='col-10 p-2'>
